@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject private var dataController = DataController()
+    
     var body: some View {
-        VStack {
-            Header()
-            TodoList()
-        }
+        Header(dataController: dataController)
+        TodoList(dataController: dataController)
     }
 }
 
